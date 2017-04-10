@@ -8,10 +8,7 @@
 	<div class="row banner">
 		<div class="col-md-11 col-md-offset-1 padding-none">
 			<h1>{{category.name}}
-			<figure class="creator">
-				<img src="{{creator.picture}}">
-				<figcaption>{{creator.name}}</figcaption>
-			</figure>
+			
 			</h1>
 		</div>
 	</div>
@@ -23,6 +20,23 @@
 		</div>
 		<div class="col-md-7"></div>
 	</div>
+
+	{% for item in items %}
+	<a href="{{url_for('showMenu', category_id = category.id)}}">
+		<div class="row">
+			<div class="col-md-1"></div>
+				<div class="col-md-10 category-list">
+					<h3>{{item.name}}</h3>
+					<h4>{{item.description}}</h4>
+					
+			</div>
+
+	
+		<div class="col-md-1"></div>
+		</div>
+	</a>
+	<br>
+	{% endfor %}
 	<div class="row">
 		<div class="flash">
 			{% with messages = get_flashed_messages() %}
@@ -37,4 +51,5 @@
 		</div>
 		<div class="col-md-1"></div>
 	</div>
+
 {% endblock %}

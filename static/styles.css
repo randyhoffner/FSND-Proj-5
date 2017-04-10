@@ -1,7 +1,7 @@
 body {
 	font-family: Montserrat, sans-serif;
 	background-image: pexels-photo-311039.jpg;
-	
+
 
 }
 
@@ -20,13 +20,13 @@ h1 {
 }
 
 h2 {
-	font-size: 24px;
-	color: #42C3C9;
+	font-size: 30px;
+	color: #4A4A4A;
 	line-height: 29px;
 }
 
 h3 {
-	font-size: 18px;
+	font-size: 28px;
 	color: #4A4A4A;
 	line-height: 23px;
 }
