@@ -9,7 +9,7 @@
 <div class="row divider blue">
 	<div class="col-md-12"></div>
 </div>
-<div class="row banner main">
+<div class="top banner main">
 	<div class="col-md-1"></div>
 	<div class="col-md-11 padding-none">
 		<h1>Liquor Categories</h1>
@@ -37,6 +37,8 @@
 					<span class="glyphicon glyphicon-bottle" aria-hidden="true"></span>Add Category
 				</button>
 			</a>
+
+			
 		</div>
 		<div class="col-md-1"></div>
 	</div>
@@ -46,11 +48,31 @@
 				<div class="col-md-1"></div>
 					<div class="col-md-10 category-list">
 						<h2>{{category.name}}</h2>
-				</div>
-			<div class="col-md-1"></div>
+				
+
+			
+
+			<div class="editdeletepane"></div>	
+	<!--<a href="{{url_for('editCategory', category_id = category.id)}}">Edit</a>-->
+
+
+	<a href="{{url_for('deleteCategory', category_id = category.id)}}">Delete</a>
+	</div>
+	</div>
+
+
+		<!--<a href="{{url_for('deleteCategory', category_id = category.id)}}">
+			<button class="btn btn-default" id="delete-menu-item">
+				<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete Category</button>
+		</a>	
+
 			
 			</div>
 		</a>
+		<br><br>-->
+	
+
+
 		<br><br>
-	{% endfor %}
+		{% endfor %}
 	{% endblock %}
