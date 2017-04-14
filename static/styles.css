@@ -17,7 +17,7 @@ h1 {
 	color: #51453B;
 	line-height: 60px;
 	font-weight: 300;
-	text-shadow: 2px 2px #cccccc;
+	text-shadow: 4px 4px #cccccc;
 }
 
 h2 {
@@ -105,9 +105,11 @@ h3 {
 }
 .divider {
 	height: 15px;
+
 }
 .divider.blue {
-	background-color: #42C3C9;
+
+	background-color: #1ad1ff;
 }
 .divider.green {
 	background-color: #9FB80A;
@@ -117,7 +119,7 @@ h3 {
 	background: url("/static/top-banner.jpg");
 	background-position: right;
 	background-repeat: no-repeat;
-	background-size: cover;
+	
 }
 .banner.menu {
 	height: 150px;
