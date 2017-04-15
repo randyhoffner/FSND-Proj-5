@@ -37,7 +37,7 @@ h3 {
 	line-height: 23px;
 }
  p {
- 	font-family: "Helvetica Neue", Roboto, Helvetica, Arial, sans-serif;
+ 	font-family: Roboto, sans-serif;
  	font-size: 16px;
  	color: #7B7573;
  	line-height: 24px;
@@ -52,8 +52,12 @@ h3 {
 
  a {
  	font-size: 14px;
- 	color: #0093B9;
+ 	color: #0066ff;
  	line-height: 17px;
+ }
+
+ a:hover {
+ 	color: red;
  }
 .padding-top {
 	padding-top: 30px;
@@ -70,19 +74,20 @@ h3 {
 .btn {
 	padding: 20px;
 	margin: 0;
-	border-color: #9FB80A;
+	border-color: #00ff00;
 	border-width: 2px;
-	color: #9FB80A;;
+	color: #262626;
 }
 .btn:hover {
-	border-color: #9FB80A;
+	border-color: #00ff00;
 }
 .btn.delete {
 	border-color: #aaaaaa;
+	border-width: 2px;
 	color: #aaaaaa;
 }
 .btn.delete:hover {
-	border-color: #aaaaaa;
+	
 	color: red;
 }
 .glyphicon {
@@ -100,8 +105,8 @@ h3 {
 	margin-bottom: 0;
 	line-height: 16px;
 	font-size: 16px;
-	color: #7B7573;
-	font-weight: 400;
+	color: #272625;
+	font-weight: 700;
 }
 .divider {
 	height: 15px;
@@ -112,7 +117,7 @@ h3 {
 	background-color: #1ad1ff;
 }
 .divider.green {
-	background-color: #9FB80A;
+	background-color: #00ff00;
 }
 .banner.main {
 	height: 150px;
@@ -132,23 +137,21 @@ h3 {
 .banner h1 {
 	margin: 45px 0;
 }
- .restaurant-list {
- 	background-color: #F0F0F0;
+ .category-list {
+ 	background-color: #ccf5ff;
  	padding: 20px;
-u }
- .restaurant-list:hover {
- 	background-color: #e1e17f;
+}
+ .category-list:hover {
+ 	background-color: #ffccdd;
  	padding: 20px;
 }
 .menu-item {
-	background: #F0F0F0;
+	background: #ff66ff;
 	padding: 20px;
 	margin: 20px;
 	margin-left: -20px;
 }
-.menu-price {
-	font-weight: 700;
-}
+
 .creator {
 	padding-right: 20px;
 	margin-top: -20px;
