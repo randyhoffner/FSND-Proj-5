@@ -1,7 +1,7 @@
 {% extends "main.html" %}
 {% block content %}
 {% include "header.html" %}
-
+	<br><br><br>
 	<div class="row divider green">
 		<div class="col-md-12"></div>
 	</div>
@@ -12,61 +12,6 @@
 			</h1>
 		</div>
 	</div>
-
-
-
-
-	<div class="col-md-7"></div>
-</div>
-
-	{% for item in items %}
-	
-		<div class="row">
-	<a href="{{url_for('showMenu', category_id = category.id)}}">
-				<div class="col-md-2"></div>
-				<div class="col-md-7 menu-list">
-
-					<h2>{{item.name}}</h2>
-					<br>
-					<h3>{{item.description}}</h3>
-
-			</div>
-
-	<div class="row padding-top padding-bottom">
-	
-			
-		
-	<div class="editdeletepane"></div>	
-	<a href="{{url_for('editMenuItem', category_id = category.id, menu_id=item.id)}}">Edit</a>
-
-
-	<a href="{{url_for('deleteMenuItem', category_id = category.id, menu_id=item.id)}}">Delete</a>
-	</div>
-
-
-
-		<div class="col-md-1"></div>
-		</div>
-	</a>
-	<br>
-	{% endfor %}
-
-
-	<div class="row padding-top padding-bottom">
-	<div class="col-md-1"></div>
-	<div class="col-md-11 padding-none">
-		
-		<a href="{{url_for('newMenuItem', category_id = category.id)}}">
-			<button class="btn btn-default" id="new-menu-item">
-				<span class="glyphicon glyphicon-glass" aria-hidden="true"></span>Add Item
-			</button>
-		</a>
-
-		
-		
-
-	</div>
-
 
 
 <div class='flash'>
@@ -80,6 +25,73 @@
 			{% endif %}
 	{% endwith %}
 </div>
+	
+
+<div class="row padding-bottom">
+	<div class="col-md-1"></div>
+	<div class="col-md-10padding-none">
+
+
+<a href="{{url_for('newMenuItem', category_id = category.id)}}">
+			<button class="btn btn-default" id="new-menu-item">
+				<span class="glyphicon glyphicon-glass" aria-hidden="true"></span>Add Item
+			</button>
+		</a>
+</div>
+
+<br><br>		
+
+	{% for item in items %}
+	
+		
+	<a href="{{url_for('showMenu', category_id = category.id)}}">
+		<div class="row">
+			<div class="col-md-1"></div>
+				<div class="col-md-10 category-list">
+
+					<h2>{{item.name}}</h2>
+					
+					<h3>{{item.description}}</h3>
+
+			<div class="editdeletepane"></div>	
+	<a href="{{url_for('editMenuItem', category_id = category.id, menu_id=item.id)}}">Edit</a>
+
+
+	<a href="{{url_for('deleteMenuItem', category_id = category.id, menu_id=item.id)}}">Delete</a>
+	</div>
+			 </div>
+			
+	</a>
+
+
+
+	<div class="row padding-top padding-bottom">
+	
+			
+		
+	
+
+
+
+		<div class="col-md-1"></div>
+		</div>
+	</a>
+	<br>
+	{% endfor %}
+
+
+	
+		
+		
+
+		
+		
+
+	</div>
+
+
+
+
 
 
 {% endblock %}
