@@ -16,15 +16,17 @@ h1 {
 	font-size: 60px;
 	color: #51453B;
 	line-height: 60px;
-	font-weight: 300;
+	font-weight: 400;
 	text-shadow: 4px 4px #cccccc;
 }
 
 h2 {
 	font-family: Montserrat, sans-serif;
-	font-size: 50px;
+	font-size: 55px;
 	color: #4A4A4A;
+	text-shadow: 4px 4px #cccccc;
 	line-height: 29px;
+
 }
 
 h2:hover {
@@ -32,7 +34,7 @@ h2:hover {
 }
 
 h3 {
-	font-size: 32px;
+	font-size: 35px;
 	color: #0066ff;
 	line-height: 33px;
 }
@@ -78,20 +80,37 @@ h3 {
 	margin: 0;
 	border-color: #00ff00;
 	border-width: 2px;
-	color: #262626;
+	color: #333333;
+
 }
 .btn:hover {
 	border-color: #00ff00;
+	color: red;
+	background-color: #f2f2f2;
+	
+	
 }
+
+
 .btn.delete {
-	border-color: #aaaaaa;
+	
+	
+	padding: 20px;
+	margin: 0;
+	border-color: #ff0000;
 	border-width: 2px;
-	color: #aaaaaa;
+	color: white;
+	
 }
 .btn.delete:hover {
-	
+	border-color: #ff0000;
 	color: red;
 }
+
+.btn.danger {
+	color: white;
+}
+
 .glyphicon {
 	margin-right: 10px;
 }

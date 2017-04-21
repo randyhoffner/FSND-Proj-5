@@ -29,14 +29,14 @@
 
 </div>
 
-	<div class="row padding-top padding-bottom">
-		<div class="col-md-1"></div>
-		<div class="col-md-10 padding-none">
-			<a href="{{url_for('newCategory')}}">
-				<button class="btn btn-default" id="new-category">
-					<span class="glyphicon glyphicon-glass" aria-hidden="true"></span>Add Category
-				</button>
-			</a>
+<div class="row padding-top padding-bottom">
+	<div class="col-md-1"></div>
+	<div class="col-md-10 padding-none">
+		<a href="{{url_for('newCategory')}}">
+			<button class="btn btn-link" id="new-category">
+				<span class="glyphicon glyphicon-glass" aria-hidden="true"></span>Add Category
+			</button>
+		</a>
 
 			
 		</div>
@@ -53,25 +53,16 @@
 
 			
 
-			<div class="editdeletepane"></div>	
-	<a href="{{url_for('editCategory', category_id = category.id)}}">Edit</a>
+	<div class="editdeletepane"></div>	
+		<a href="{{url_for('editCategory', category_id = category.id)}}">Edit</a>
 
 
-	<a href="{{url_for('deleteCategory', category_id = category.id)}}">Delete</a>
+		<a href="{{url_for('deleteCategory', category_id = category.id)}}">Delete</a>
 	</div>
 	</div>
 
 
-		<!--<a href="{{url_for('deleteCategory', category_id = category.id)}}">
-			<button class="btn btn-default" id="delete-menu-item">
-				<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete Category</button>
-		</a>	
-
-			
-			</div>
-		</a>
-		<br><br>-->
-	
+		
 
 
 		<br><br>
