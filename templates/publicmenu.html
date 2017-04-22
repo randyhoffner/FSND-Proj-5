@@ -2,54 +2,54 @@
 {% block content %}
 {% include "header.html" %}
 
-	<div class="row divider green">
-		<div class="col-md-12"></div>
-	</div>
-	<div class="row banner">
-		<div class="col-md-11 col-md-offset-1 padding-none">
-			<h1>{{category.name}}
+<div class="row divider green">
+	<div class="col-md-12"></div>
+</div>
+<div class="row banner">
+	<div class="col-md-11 col-md-offset-1 padding-none">
+		<h1>{{category.name}}
 			
-			</h1>
-		</div>
+		</h1>
 	</div>
+</div>
 
-	<div class="row padding-top padding-bottom">
-		<div class="col-md-1"></div>
-		<div class="col-md-11 padding-none">
-			
-		</div>
-		<div class="col-md-7"></div>
+<div class="row padding-top padding-bottom">
+	<div class="col-md-1"></div>
+	<div class="col-md-11 padding-none">
+		
 	</div>
+	<div class="col-md-7"></div>
+</div>
 
-	{% for item in items %}
-	<a href="{{url_for('showMenu', category_id = category.id)}}">
-		<div class="row">
-			<div class="col-md-1"></div>
-				<div class="col-md-10 category-list">
-					<h3>{{item.name}}</h3>
-					<h4>{{item.description}}</h4>
-					
-			</div>
-
-	
-		<div class="col-md-1"></div>
-		</div>
-	</a>
-	<br>
-	{% endfor %}
+{% for item in items %}
+<a href="{{url_for('showMenu', category_id = category.id)}}">
 	<div class="row">
-		<div class="flash">
-			{% with messages = get_flashed_messages() %}
-				{% if messages %}
-					<ul>
-						{% for message in messages %}
-							<li><strong>{{message}}</strong></li>
-						{% endfor %}
-					</ul>
-				{% endif %}
-			{% endwith %}
+		<div class="col-md-1"></div>
+		<div class="col-md-10 category-list">
+			<h3>{{item.name}}</h3>
+			<h4>{{item.description}}</h4>
+			
 		</div>
+
+		
 		<div class="col-md-1"></div>
 	</div>
+</a>
+<br>
+{% endfor %}
+<div class="row">
+	<div class="flash">
+		{% with messages = get_flashed_messages() %}
+		{% if messages %}
+		<ul>
+			{% for message in messages %}
+			<li><strong>{{message}}</strong></li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+		{% endwith %}
+	</div>
+	<div class="col-md-1"></div>
+</div>
 
 {% endblock %}

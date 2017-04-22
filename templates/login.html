@@ -1,24 +1,24 @@
 {% extends "main.html" %}
 {% block content %}
 
-	<!--Load prerequisites for Google signin-->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<!--Load prerequisites for Google signin-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
-	<script src="//apis.google.com/js/platform.js?onload=start" async defer></script>
-	<!--End prerequisites for Google signin-->
+<script src="//apis.google.com/js/platform.js?onload=start" async defer></script>
+<!--End prerequisites for Google signin-->
 
 
-	<br><br><br>
+<br><br><br>
 
-	<div class="row top-menu">
-		<div class="col-md-10"></div>
-		<div class="col-md-2"></div>
+<div class="row top-menu">
+	<div class="col-md-10"></div>
+	<div class="col-md-2"></div>
 
 
 	<div class="row divider blue">
 		<div class="col-md-12"></div>
 
-	<br>
+		<br>
 
 		<div class="row banner main"></div>
 		<div class="col-md-1"></div>
@@ -28,21 +28,21 @@
 		</div>		
 
 
-<!--Google sign-in button-->
+		<!--Google sign-in button-->
 
 		<div id="signInButton">
 			<span class="g-signin"
-				data-scope="openid email"
-				data-clientid="1071106262410-2i7ultljb8i0tvo6k072895tnl8b0qa2.apps.googleusercontent.com"
-				data-redirecturl="postmessage"
-				data-accesstype="offline"
-				data-cookiepolicy="single_host_origin"
-				data-callback="signInCallback"
-				data-approvalprompt="force">
-			</span>
-		</div>
+			data-scope="openid email"
+			data-clientid="1071106262410-2i7ultljb8i0tvo6k072895tnl8b0qa2.apps.googleusercontent.com"
+			data-redirecturl="postmessage"
+			data-accesstype="offline"
+			data-cookiepolicy="single_host_origin"
+			data-callback="signInCallback"
+			data-approvalprompt="force">
+		</span>
+	</div>
 
-<div id="result"></div>
+	<div id="result"></div>
 
 
 <script>

@@ -17,10 +17,10 @@
 </div>
 
 <div class="flash">
-			{% with messages = get_flashed_messages() %}
+	{% with messages = get_flashed_messages() %}
 	{% if messages %}
 	<ul>
-	{% for message in messages %}
+		{% for message in messages %}
 		<li><strong>{{message}}</strong></li>
 		{% endfor %}
 	</ul>
@@ -38,33 +38,33 @@
 			</button>
 		</a>
 
-			
-		</div>
-		<div class="col-md-1"></div>
+		
 	</div>
-	{% for category in categories %}
-		<a href = "{{url_for('showMenu', category_id = category.id)}}">
-			<div class="row">
-				<div class="col-md-1"></div>
-					<div class="col-md-10 category-list">
-						<h2>{{category.name}}</h2>
-						<h3>{{category.description}}</h3>
+	<div class="col-md-1"></div>
+</div>
+{% for category in categories %}
+<a href = "{{url_for('showMenu', category_id = category.id)}}">
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10 category-list">
+			<h2>{{category.name}}</h2>
+			<h3>{{category.description}}</h3>
 		</a>		
 
-			
+		
 
-	<div class="editdeletepane"></div>	
+		<div class="editdeletepane"></div>	
 		<a href="{{url_for('editCategory', category_id = category.id)}}">Edit</a>
 
 
 		<a href="{{url_for('deleteCategory', category_id = category.id)}}">Delete</a>
 	</div>
-	</div>
+</div>
 
 
-		
 
 
-		<br><br>
-		{% endfor %}
-	{% endblock %}
+
+<br><br>
+{% endfor %}
+{% endblock %}
