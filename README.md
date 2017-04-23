@@ -19,7 +19,7 @@ Open a terminal window, such as Mac Terminal or GitBash run in Administrator mod
 * When logged in, type cd/vagrant[ENTER] at the prompt, to navigate to the files synced between the vm and the master folder on the host machine.  Type ls[ENTER] to list those files.  Type cd/FSND-Proj-5-master[ENTER] to navigate to the catalog files, and ls[ENTER] to display those files.
 ## Run the Project
 * If you wish to start the project from scratch, first remove catalog.db, and run database_setup.py file to set up the database, with the appropriate rows and columns.Then run install_database.py to load a catalog from scratch.  You will not be able to edit or delete any of the entries, because you did not create them.  Otherwise, run the project with the catalog.db found in the repo.  
-* Run base.py to start the catalog program, which may be found at localhost:8080 on a browser.  You will be at the home page, which will display the contents of the catalog.
+* Run base.py to start the catalog program, which may be found at localhost:5000 on a browser.  You will be at the home page, which will display the contents of the catalog.
 * Click on "Click Here to Login" to get to the Login page, where you may login with Google.
 
 Once you are logged in, you will be on the homepage of Randy's Liquor App, on which you will find a list of liquor categories, along with a description of each category.  You may add a category and description by clicking on the "Add Category" button, which will take you to the newCategory.html page where you may type in your category and description.  Any category that you create may be edited or deleted by you by clicking on the appropriate link, taking you to the editcategory.html or deletecategory.html page.
