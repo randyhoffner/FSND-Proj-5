@@ -249,6 +249,7 @@ def newCategory():
 
 # Edit a category
 @app.route('/category/<int:category_id>/edit/', methods=['GET', 'POST'])
+@login_required
 def editCategory(category_id):
     editedCategory = session.query(Category).filter_by(id=category_id).one()
     if 'username' not in login_session:
@@ -274,6 +275,7 @@ def editCategory(category_id):
 
 # Delete a category
 @app.route('/category/<int:category_id>/delete/', methods=['GET', 'POST'])
+@login_required
 def deleteCategory(category_id):
     categoryToDelete = session.query(Category).filter_by(id=category_id).one()
     if 'username' not in login_session:
@@ -315,6 +317,7 @@ def showMenu(category_id):
 
 
 # Create a new menu item
+@login_required
 @app.route('/category/<int:category_id>/menu/new/', methods=['GET', 'POST'])
 def newMenuItem(category_id):
     if 'username' not in login_session:
