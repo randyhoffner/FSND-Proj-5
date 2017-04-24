@@ -317,8 +317,9 @@ def showMenu(category_id):
 
 
 # Create a new menu item
-@login_required
+
 @app.route('/category/<int:category_id>/menu/new/', methods=['GET', 'POST'])
+@login_required
 def newMenuItem(category_id):
     if 'username' not in login_session:
         return redirect('/login')
@@ -343,8 +344,7 @@ def newMenuItem(category_id):
 
 
 # Edit a menu item
-@app.route(
-           '/category/<int:category_id>/menu/<int:menu_id>/edit',
+@app.route('/category/<int:category_id>/menu/<int:menu_id>/edit',
            methods=['GET', 'POST'])
 def editMenuItem(category_id, menu_id):
     if 'username' not in login_session:
@@ -375,8 +375,7 @@ def editMenuItem(category_id, menu_id):
 
 
 # Delete a menu item
-@app.route(
-           '/category/<int:category_id>/menu/<int:menu_id>/delete',
+@app.route('/category/<int:category_id>/menu/<int:menu_id>/delete',
            methods=['GET', 'POST'])
 def deleteMenuItem(category_id, menu_id):
     if 'username' not in login_session:
